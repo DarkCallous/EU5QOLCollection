@@ -41,6 +41,16 @@
 
 				onclick = "[GetScriptedGui('adac_destroy_outdated_tools_key').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 			}
+			button_regular = {
+				size = { 480 30 }
+				fontsize = 14
+				using = bg_button_flavor_1
+
+				text = "ADAC_Update_Outdated_Tools_button"
+				tooltip = "ADAC_Update_Outdated_Tools_TT"
+
+				onclick = "[GetScriptedGui('adac_update_outdated_tools_key').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
 		}
 	}
 }
