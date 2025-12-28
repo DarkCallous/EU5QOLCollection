@@ -14,13 +14,11 @@
 			}
 			every_owned_location = 
 			{
-				limit = 
-				{	
-					any_buildings_in_location = 
-					{
-						building_type = building_type:tools_guild
-					}
-					can_build_building = building_type:tools_workshop
+				limit = {can_build_building = building_type:tools_workshop}
+				set_local_variable = 
+				{
+					name = update_nums
+					value = 0
 				}
 				every_buildings_in_location = 
 				{
@@ -28,12 +26,16 @@
 					{
 						building_type = building_type:tools_guild 
 					}
-					save_temporary_scope_as = target_building
+					change_local_variable =
+					{
+						name = update_nums
+						add = building_level
+					}
 				}
 				while =
 				{
 					limit = {root.gold > 10000}
-					count = scope:target_building.building_level
+					count = local_var:update_nums
 					construct_building = 
 					{
 						building_type = building_type:tools_workshop
@@ -51,13 +53,11 @@
 			}
 			every_owned_location = 
 			{
-				limit = 
-				{	
-					any_buildings_in_location = 
-					{
-						building_type = building_type:tools_guild
-					}
-					can_build_building = building_type:iron_foundry
+				limit = {can_build_building = building_type:iron_foundry}
+				set_local_variable = 
+				{
+					name = update_nums
+					value = 0
 				}
 				every_buildings_in_location = 
 				{
@@ -65,27 +65,11 @@
 					{
 						building_type = building_type:tools_guild 
 					}
-					save_temporary_scope_as = target_building
-				}
-				while =
-				{
-					limit = {root.gold > 10000}
-					count = scope:target_building.building_level
-					construct_building = 
+					change_local_variable =
 					{
-						building_type = building_type:iron_foundry
+						name = update_nums
+						add = building_level
 					}
-				}
-			}
-			every_owned_location = 
-			{
-				limit = 
-				{	
-					any_buildings_in_location = 
-					{
-						building_type = building_type:tools_workshop
-					}
-					can_build_building = building_type:iron_foundry
 				}
 				every_buildings_in_location = 
 				{
@@ -93,12 +77,16 @@
 					{
 						building_type = building_type:tools_workshop 
 					}
-					save_temporary_scope_as = target_building
+					change_local_variable =
+					{
+						name = update_nums
+						add = building_level
+					}
 				}
 				while =
 				{
 					limit = {root.gold > 10000}
-					count = scope:target_building.building_level
+					count = local_var:update_nums
 					construct_building = 
 					{
 						building_type = building_type:iron_foundry
@@ -107,18 +95,16 @@
 			}
 		}
 		#Update to Lv4 from Lv1 first. 
-		if =
+		else_if =
 		{
 			limit = { can_build_building = building_type:iron_mill }
 			every_owned_location = 
 			{
-				limit = 
-				{	
-					any_buildings_in_location = 
-					{
-						building_type = building_type:tools_guild
-					}
-					can_build_building = building_type:iron_mill
+				limit = {can_build_building = building_type:iron_mill}
+				set_local_variable = 
+				{
+					name = update_nums
+					value = 0
 				}
 				every_buildings_in_location = 
 				{
@@ -126,27 +112,11 @@
 					{
 						building_type = building_type:tools_guild 
 					}
-					save_temporary_scope_as = target_building
-				}
-				while =
-				{
-					limit = {root.gold > 10000}
-					count = scope:target_building.building_level
-					construct_building = 
+					change_local_variable =
 					{
-						building_type = building_type:iron_mill
+						name = update_nums
+						add = building_level
 					}
-				}
-			}
-			every_owned_location = 
-			{
-				limit = 
-				{	
-					any_buildings_in_location = 
-					{
-						building_type = building_type:tools_workshop
-					}
-					can_build_building = building_type:iron_mill
 				}
 				every_buildings_in_location = 
 				{
@@ -154,27 +124,11 @@
 					{
 						building_type = building_type:tools_workshop 
 					}
-					save_temporary_scope_as = target_building
-				}
-				while =
-				{
-					limit = {root.gold > 10000}
-					count = scope:target_building.building_level
-					construct_building = 
+					change_local_variable =
 					{
-						building_type = building_type:iron_mill
+						name = update_nums
+						add = building_level
 					}
-				}
-			}
-			every_owned_location = 
-			{
-				limit = 
-				{	
-					any_buildings_in_location = 
-					{
-						building_type = building_type:iron_foundry
-					}
-					can_build_building = building_type:iron_mill
 				}
 				every_buildings_in_location = 
 				{
@@ -182,12 +136,16 @@
 					{
 						building_type = building_type:iron_foundry 
 					}
-					save_temporary_scope_as = target_building
+					change_local_variable =
+					{
+						name = update_nums
+						add = building_level
+					}
 				}
 				while =
 				{
 					limit = {root.gold > 10000}
-					count = scope:target_building.building_level
+					count = local_var:update_nums
 					construct_building = 
 					{
 						building_type = building_type:iron_mill
