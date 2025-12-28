@@ -7,7 +7,11 @@
         #Update to Lv2 if applicable
         if =
 		{
-			limit = { can_build_building = building_type:tools_workshop }
+			limit = 
+			{ 
+				can_build_building = building_type:tools_workshop 
+				NOT = {can_build_building = building_type:iron_foundry}
+			}
 			every_owned_location = 
 			{
 				limit = 
@@ -40,7 +44,39 @@
         #Update to Lv3 from Lv1 first. 
         else_if =
 		{
-			limit = { can_build_building = building_type:iron_foundry }
+			limit = 
+			{ 
+				can_build_building = building_type:iron_foundry 
+				NOT = {can_build_building = building_type:iron_mill}
+			}
+			every_owned_location = 
+			{
+				limit = 
+				{	
+					any_buildings_in_location = 
+					{
+						building_type = building_type:tools_guild
+					}
+					can_build_building = building_type:iron_foundry
+				}
+				every_buildings_in_location = 
+				{
+					limit = 
+					{
+						building_type = building_type:tools_guild 
+					}
+					save_temporary_scope_as = target_building
+				}
+				while =
+				{
+					limit = {root.gold > 10000}
+					count = scope:target_building.building_level
+					construct_building = 
+					{
+						building_type = building_type:iron_foundry
+					}
+				}
+			}
 			every_owned_location = 
 			{
 				limit = 
@@ -70,10 +106,66 @@
 				}
 			}
 		}
-
+		#Update to Lv4 from Lv1 first. 
 		if =
 		{
 			limit = { can_build_building = building_type:iron_mill }
+			every_owned_location = 
+			{
+				limit = 
+				{	
+					any_buildings_in_location = 
+					{
+						building_type = building_type:tools_guild
+					}
+					can_build_building = building_type:iron_mill
+				}
+				every_buildings_in_location = 
+				{
+					limit = 
+					{
+						building_type = building_type:tools_guild 
+					}
+					save_temporary_scope_as = target_building
+				}
+				while =
+				{
+					limit = {root.gold > 10000}
+					count = scope:target_building.building_level
+					construct_building = 
+					{
+						building_type = building_type:iron_mill
+					}
+				}
+			}
+			every_owned_location = 
+			{
+				limit = 
+				{	
+					any_buildings_in_location = 
+					{
+						building_type = building_type:tools_workshop
+					}
+					can_build_building = building_type:iron_mill
+				}
+				every_buildings_in_location = 
+				{
+					limit = 
+					{
+						building_type = building_type:tools_workshop 
+					}
+					save_temporary_scope_as = target_building
+				}
+				while =
+				{
+					limit = {root.gold > 10000}
+					count = scope:target_building.building_level
+					construct_building = 
+					{
+						building_type = building_type:iron_mill
+					}
+				}
+			}
 			every_owned_location = 
 			{
 				limit = 
