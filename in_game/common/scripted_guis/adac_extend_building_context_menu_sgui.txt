@@ -29,8 +29,9 @@ adac_destroy_outdated_tools_key = {
 	is_valid = { always = yes }		
 	effect = 
     { 
-		scope:target = 
+		if =
 		{
+			limit = { can_build_building = building_type:iron_mill }
 			every_owned_location = 
 			{
 				limit = 
@@ -53,31 +54,59 @@ adac_destroy_outdated_tools_key = {
 					destroy_all_buildings_of_type = 
 					building_type:iron_foundry	
 				}
-				else_if = 
+			}
+		}
+		else_if =
+		{
+			limit = { can_build_building = building_type:iron_foundry }
+			every_owned_location = 
+			{
+				limit = 
+				{	
+					any_buildings_in_location = 
+					{
+						building_category = consumer_goods_category
+					}
+				}
+				if = 
 				{
 					limit = 
 					{
 						can_build_building = building_type:iron_foundry
 					}
 					destroy_all_buildings_of_type = 
-					building_type:tools_guild	
+					building_type:tools_guild
 					destroy_all_buildings_of_type = 
 					building_type:tools_workshop	
 				}
-				else_if = 
+			}
+		}
+		else_if =
+		{
+			limit = { can_build_building = building_type:tools_workshop }
+			every_owned_location = 
+			{
+				limit = 
+				{	
+					any_buildings_in_location = 
+					{
+						building_category = consumer_goods_category
+					}
+				}
+				if = 
 				{
 					limit = 
 					{
 						can_build_building = building_type:tools_workshop
 					}
 					destroy_all_buildings_of_type = 
-					building_type:tools_guild	
+					building_type:tools_guild
 				}
 			}
 		}
     }
-	confirm_title = {}			# Confirmation window title for this SGUI
-	confirm_text = {}			# Confirmation window text for this SGUI
+	confirm_title = {}		
+	confirm_text = {}		
 	ai_is_valid = { always = false }
 	ai_chance = 0
 }

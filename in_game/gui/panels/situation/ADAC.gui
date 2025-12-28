@@ -39,7 +39,7 @@ situation_panel = {
 				text = "ADAC_Remove_Outdated_Tools_button"
 				tooltip = "ADAC_Remove_Outdated_Tools_TT"
 
-				onclick = "[GetScriptedGui('adac_extend_buildings_context_menu_toggle_gui_key').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				onclick = "[GetScriptedGui('adac_destroy_outdated_tools_key').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 			}
 		}
 	}
