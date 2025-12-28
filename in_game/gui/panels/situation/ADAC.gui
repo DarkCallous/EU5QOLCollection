@@ -1,0 +1,46 @@
+situation_panel = {
+
+	##################################### TOP HEADER #####################################
+	
+	##################################### MAIN IMAGE #####################################
+
+	##################################### TAB NAME #####################################
+
+	##################################### SUBHEADER #####################################
+
+	##################################### MAIN CONTENT #####################################
+	blockoverride "situation_panel_main_content" {
+		situation_card_expandable = {
+			blockoverride "header_icon" {
+			}
+			blockoverride "header_text" {
+				text = "ADAC_Introduction_Title"
+			}
+			blockoverride "bottom_content" {
+				text_multi = {
+					margin = {15 0}
+					layoutpolicy_horizontal = expanding
+					max_width = 400
+					autoresize = yes
+					text = "ADAC_Introduction"
+				}
+			}
+		}
+	}
+	blockoverride "situation_panel_main_content_bottom" {
+		
+		vbox = {
+			layoutpolicy_horizontal = expanding
+			button_regular = {
+				size = { 480 30 }
+				fontsize = 14
+				using = bg_button_flavor_1
+
+				text = "ADAC_Remove_Outdated_Tools_button"
+				tooltip = "ADAC_Remove_Outdated_Tools_TT"
+
+				onclick = "[GetScriptedGui('adac_extend_buildings_context_menu_toggle_gui_key').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+		}
+	}
+}

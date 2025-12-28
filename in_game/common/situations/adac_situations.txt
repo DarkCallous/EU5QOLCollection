@@ -1,0 +1,35 @@
+ADAC = {
+	monthly_spawn_chance = 1
+	#hint_tag = hint_ADAC
+	
+	can_start = {
+		#this scope is situation not country
+		#is_ai = no
+	}
+	
+	can_end = {
+		always = no
+	}
+	
+	visible = {
+		is_ai = no
+	}
+
+	on_start = {
+#		every_country = {
+#			limit = {
+#				is_ai = no
+#			}
+#			OGAS_Auto_Road_Initialize = yes
+#		}
+	}
+
+	on_monthly = {
+	}
+
+	tooltip = {
+		custom_tooltip = "ADAC_desc"
+	}
+
+    is_data_map = yes
+}
