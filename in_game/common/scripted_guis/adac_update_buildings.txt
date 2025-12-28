@@ -1,161 +1,748 @@
-﻿adac_update_outdated_tools_key = {
+﻿#Production_beer
+adac_update_outdated_beer_key = {
 	scope = country
 	is_shown = { always = yes }		
 	is_valid = { always = yes }		
 	effect = 
     { 
-        #Update to Lv2 if applicable
-        if =
+		set_global_variable = 
 		{
-			limit = 
-			{ 
-				can_build_building = building_type:tools_workshop 
-				NOT = {can_build_building = building_type:iron_foundry}
-			}
-			every_owned_location = 
-			{
-				limit = {can_build_building = building_type:tools_workshop}
-				set_local_variable = 
-				{
-					name = update_nums
-					value = 0
-				}
-				every_buildings_in_location = 
-				{
-					limit = 
-					{
-						building_type = building_type:tools_guild 
-					}
-					change_local_variable =
-					{
-						name = update_nums
-						add = building_level
-					}
-				}
-				while =
-				{
-					limit = {root.gold > 10000}
-					count = local_var:update_nums
-					construct_building = 
-					{
-						building_type = building_type:tools_workshop
-					}
-				}
-			}
+			name = g_updating_type_a
+			value = building_type:brewery
 		}
-        #Update to Lv3 from Lv1 first. 
-        else_if =
+		set_global_variable = 
 		{
-			limit = 
-			{ 
-				can_build_building = building_type:iron_foundry 
-				NOT = {can_build_building = building_type:iron_mill}
-			}
-			every_owned_location = 
-			{
-				limit = {can_build_building = building_type:iron_foundry}
-				set_local_variable = 
-				{
-					name = update_nums
-					value = 0
-				}
-				every_buildings_in_location = 
-				{
-					limit = 
-					{
-						building_type = building_type:tools_guild 
-					}
-					change_local_variable =
-					{
-						name = update_nums
-						add = building_level
-					}
-				}
-				every_buildings_in_location = 
-				{
-					limit = 
-					{
-						building_type = building_type:tools_workshop 
-					}
-					change_local_variable =
-					{
-						name = update_nums
-						add = building_level
-					}
-				}
-				while =
-				{
-					limit = {root.gold > 10000}
-					count = local_var:update_nums
-					construct_building = 
-					{
-						building_type = building_type:iron_foundry
-					}
-				}
-			}
+			name = g_updating_type_b
+			value = building_type:beer_workshop
 		}
-		#Update to Lv4 from Lv1 first. 
-		else_if =
+		set_global_variable = 
 		{
-			limit = { can_build_building = building_type:iron_mill }
-			every_owned_location = 
-			{
-				limit = {can_build_building = building_type:iron_mill}
-				set_local_variable = 
-				{
-					name = update_nums
-					value = 0
-				}
-				every_buildings_in_location = 
-				{
-					limit = 
-					{
-						building_type = building_type:tools_guild 
-					}
-					change_local_variable =
-					{
-						name = update_nums
-						add = building_level
-					}
-				}
-				every_buildings_in_location = 
-				{
-					limit = 
-					{
-						building_type = building_type:tools_workshop 
-					}
-					change_local_variable =
-					{
-						name = update_nums
-						add = building_level
-					}
-				}
-				every_buildings_in_location = 
-				{
-					limit = 
-					{
-						building_type = building_type:iron_foundry 
-					}
-					change_local_variable =
-					{
-						name = update_nums
-						add = building_level
-					}
-				}
-				while =
-				{
-					limit = {root.gold > 10000}
-					count = local_var:update_nums
-					construct_building = 
-					{
-						building_type = building_type:iron_mill
-					}
-				}
-			}
+			name = g_updating_type_c
+			value = building_type:brewery_manufactory
 		}
+		set_global_variable = 
+		{
+			name = g_updating_type_d
+			value = building_type:brewery_mill
+		}
+        fn_update_building_series = yes
     }
-	confirm_title = {}		
-	confirm_text = {}		
-	ai_is_valid = { always = false }
+	#confirm_title = {}		
+	#confirm_text = {}		
+	
+	ai_chance = 0
+}
+#Production_books
+adac_update_outdated_books_key = {
+	scope = country
+	is_shown = { always = yes }		
+	is_valid = { always = yes }		
+	effect = 
+    { 
+		set_global_variable = 
+		{
+			name = g_updating_type_a
+			value = building_type:scriptorium
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_b
+			value = building_type:printing_press_shop
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_c
+			value = building_type:printing_manufactory
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_d
+			value = building_type:printing_mill
+		}
+        fn_update_building_series = yes
+    }
+	#confirm_title = {}		
+	#confirm_text = {}		
+	
+	ai_chance = 0
+}
+#Production_cannons
+adac_update_outdated_cannons_key = {
+	scope = country
+	is_shown = { always = yes }		
+	is_valid = { always = yes }		
+	effect = 
+    { 
+		set_global_variable = 
+		{
+			name = g_updating_type_a
+			value = building_type:cannon_maker
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_b
+			value = building_type:cannon_workshop
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_c
+			value = building_type:cannon_foundry
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_d
+			value = building_type:cannons_factory
+		}
+        fn_update_building_series = yes
+    }
+	#confirm_title = {}		
+	#confirm_text = {}		
+	
+	ai_chance = 0
+}
+#Production_cloth
+adac_update_outdated_cloth_key = {
+	scope = country
+	is_shown = { always = yes }		
+	is_valid = { always = yes }		
+	effect = 
+    { 
+		set_global_variable = 
+		{
+			name = g_updating_type_a
+			value = building_type:cloth_guild
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_b
+			value = building_type:cloth_workshop
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_c
+			value = building_type:cloth_manufactory
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_d
+			value = building_type:textile_mill
+		}
+        fn_update_building_series = yes
+    }
+	#confirm_title = {}		
+	#confirm_text = {}		
+	
+	ai_chance = 0
+}
+#Production_dyes
+adac_update_outdated_dyes_key = {
+	scope = country
+	is_shown = { always = yes }		
+	is_valid = { always = yes }		
+	effect = 
+    { 
+		set_global_variable = 
+		{
+			name = g_updating_type_a
+			value = building_type:dyes_guild
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_b
+			value = building_type:dyes_workshop
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_c
+			value = building_type:dyesworks
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_d
+			value = building_type:dyes_mill
+		}
+        fn_update_building_series = yes
+    }
+	#confirm_title = {}		
+	#confirm_text = {}		
+	
+	ai_chance = 0
+}
+#Production_fine_cloth
+adac_update_outdated_fine_cloth_key = {
+	scope = country
+	is_shown = { always = yes }		
+	is_valid = { always = yes }		
+	effect = 
+    { 
+		set_global_variable = 
+		{
+			name = g_updating_type_a
+			value = building_type:fine_cloth_guild
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_b
+			value = building_type:fine_cloth_workshop
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_c
+			value = building_type:fine_cloth_manufactory
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_d
+			value = building_type:fine_cloth_mill
+		}
+        fn_update_building_series = yes
+    }
+	#confirm_title = {}		
+	#confirm_text = {}		
+	
+	ai_chance = 0
+}
+#Production_firearms
+adac_update_outdated_firearms_key = {
+	scope = country
+	is_shown = { always = yes }		
+	is_valid = { always = yes }		
+	effect = 
+    { 
+		set_global_variable = 
+		{
+			name = g_updating_type_a
+			value = building_type:hand_cannon_guild
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_b
+			value = building_type:gun_smith
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_c
+			value = building_type:guns_workshop
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_d
+			value = building_type:firearms_manufactory
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_e
+			value = building_type:firearms_factory
+		}
+        fn_update_building_series = yes
+    }
+	#confirm_title = {}		
+	#confirm_text = {}		
+	
+	ai_chance = 0
+}
+#Production_furniture
+adac_update_outdated_furniture_key = {
+	scope = country
+	is_shown = { always = yes }		
+	is_valid = { always = yes }		
+	effect = 
+    { 
+		set_global_variable = 
+		{
+			name = g_updating_type_a
+			value = building_type:furniture_guild
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_b
+			value = building_type:furniture_workshop
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_c
+			value = building_type:furniture_manufactory
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_d
+			value = building_type:furniture_mill
+		}
+        fn_update_building_series = yes
+    }
+	#confirm_title = {}		
+	#confirm_text = {}		
+	
+	ai_chance = 0
+}
+#Production_glass
+adac_update_outdated_glass_key = {
+	scope = country
+	is_shown = { always = yes }		
+	is_valid = { always = yes }		
+	effect = 
+    { 
+		set_global_variable = 
+		{
+			name = g_updating_type_a
+			value = building_type:glass_guild
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_b
+			value = building_type:glass_workshop
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_c
+			value = building_type:glassworks
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_d
+			value = building_type:glass_mill
+		}
+        fn_update_building_series = yes
+    }
+	#confirm_title = {}		
+	#confirm_text = {}		
+	
+	ai_chance = 0
+}
+#Production_lacquerware
+adac_update_outdated_lacquerware_key = {
+	scope = country
+	is_shown = { always = yes }		
+	is_valid = { always = yes }		
+	effect = 
+    { 
+		set_global_variable = 
+		{
+			name = g_updating_type_a
+			value = building_type:lacquerware_guild
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_b
+			value = building_type:lacquerware_manufactory
+		}
+        fn_update_building_series = yes
+    }
+	#confirm_title = {}		
+	#confirm_text = {}		
+	
+	ai_chance = 0
+}
+#Production_leather
+adac_update_outdated_leather_key = {
+	scope = country
+	is_shown = { always = yes }		
+	is_valid = { always = yes }		
+	effect = 
+    { 
+		set_global_variable = 
+		{
+			name = g_updating_type_a
+			value = building_type:tannery
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_b
+			value = building_type:tanning_workshop
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_c
+			value = building_type:tannery_manufactory
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_d
+			value = building_type:tannery_mill
+		}
+        fn_update_building_series = yes
+    }
+	#confirm_title = {}		
+	#confirm_text = {}		
+	
+	ai_chance = 0
+}
+#Production_liquor
+adac_update_outdated_liquor_key = {
+	scope = country
+	is_shown = { always = yes }		
+	is_valid = { always = yes }		
+	effect = 
+    { 
+		set_global_variable = 
+		{
+			name = g_updating_type_a
+			value = building_type:distillers_guild
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_b
+			value = building_type:distillers_workshop
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_c
+			value = building_type:distiller_manufactory
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_d
+			value = building_type:distiller_mill
+		}
+        fn_update_building_series = yes
+    }
+	#confirm_title = {}		
+	#confirm_text = {}		
+	
+	ai_chance = 0
+}
+#Production_naval_supplies
+adac_update_outdated_naval_supplies_key = {
+	scope = country
+	is_shown = { always = yes }		
+	is_valid = { always = yes }		
+	effect = 
+    { 
+		set_global_variable = 
+		{
+			name = g_updating_type_a
+			value = building_type:naval_supplies_guild
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_b
+			value = building_type:naval_supplies_workshop
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_c
+			value = building_type:naval_supplies_manufactory
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_d
+			value = building_type:naval_supplies_mill
+		}
+        fn_update_building_series = yes
+    }
+	#confirm_title = {}		
+	#confirm_text = {}		
+	
+	ai_chance = 0
+}
+#Production_paper
+adac_update_outdated_paper_key = {
+	scope = country
+	is_shown = { always = yes }		
+	is_valid = { always = yes }		
+	effect = 
+    { 
+		set_global_variable = 
+		{
+			name = g_updating_type_a
+			value = building_type:paper_guild
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_b
+			value = building_type:paper_workshop
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_c
+			value = building_type:paper_manufactory
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_d
+			value = building_type:paper_mill
+		}
+        fn_update_building_series = yes
+    }
+	#confirm_title = {}		
+	#confirm_text = {}		
+	
+	ai_chance = 0
+}
+#Production_porcelain
+adac_update_outdated_porcelain_key = {
+	scope = country
+	is_shown = { always = yes }		
+	is_valid = { always = yes }		
+	effect = 
+    { 
+		set_global_variable = 
+		{
+			name = g_updating_type_a
+			value = building_type:porcelain_guild
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_b
+			value = building_type:porcelain_manufactory
+		}
+        fn_update_building_series = yes
+    }
+	#confirm_title = {}		
+	#confirm_text = {}		
+	
+	ai_chance = 0
+}
+#Production_pottery
+adac_update_outdated_pottery_key = {
+	scope = country
+	is_shown = { always = yes }		
+	is_valid = { always = yes }		
+	effect = 
+    { 
+		set_global_variable = 
+		{
+			name = g_updating_type_a
+			value = building_type:pottery_guild
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_b
+			value = building_type:pottery_workshop
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_c
+			value = building_type:pottery_manufactory
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_d
+			value = building_type:pottery_mill
+		}
+        fn_update_building_series = yes
+    }
+	#confirm_title = {}		
+	#confirm_text = {}		
+	
+	ai_chance = 0
+}
+#Production_saltpeter
+adac_update_outdated_saltpeter_key = {
+	scope = country
+	is_shown = { always = yes }		
+	is_valid = { always = yes }		
+	effect = 
+    { 
+		set_global_variable = 
+		{
+			name = g_updating_type_a
+			value = building_type:saltpeter_guild
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_b
+			value = building_type:saltpeter_workshop
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_c
+			value = building_type:putrefaction_works
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_d
+			value = building_type:putrefaction_mill
+		}
+        fn_update_building_series = yes
+    }
+	#confirm_title = {}		
+	#confirm_text = {}		
+	
+	ai_chance = 0
+}
+#Production_tools
+adac_update_outdated_tools_key = {
+	scope = country
+	is_shown = { always = yes }		
+	is_valid = { always = yes }		
+	effect = 
+    { 
+		set_global_variable = 
+		{
+			name = g_updating_type_a
+			value = building_type:tools_guild
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_b
+			value = building_type:tools_workshop
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_c
+			value = building_type:iron_foundry
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_d
+			value = building_type:iron_mill
+		}
+        fn_update_building_series = yes
+    }
+	#confirm_title = {}		
+	#confirm_text = {}		
+	
+	ai_chance = 0
+}
+#Production_weapons
+adac_update_outdated_weapons_key = {
+	scope = country
+	is_shown = { always = yes }		
+	is_valid = { always = yes }		
+	effect = 
+    { 
+		set_global_variable = 
+		{
+			name = g_updating_type_a
+			value = building_type:weapon_guild
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_b
+			value = building_type:weapon_workshop
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_c
+			value = building_type:weapon_manufactory
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_d
+			value = building_type:weapon_factory
+		}
+        fn_update_building_series = yes
+    }
+	#confirm_title = {}		
+	#confirm_text = {}		
+	
+	ai_chance = 0
+}
+#Production_wine
+adac_update_outdated_wine_key = {
+	scope = country
+	is_shown = { always = yes }		
+	is_valid = { always = yes }		
+	effect = 
+    { 
+		set_global_variable = 
+		{
+			name = g_updating_type_a
+			value = building_type:winery
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_b
+			value = building_type:winery_manufactory
+		}
+        fn_update_building_series = yes
+    }
+	#confirm_title = {}		
+	#confirm_text = {}		
+	
+	ai_chance = 0
+}
+#Markets
+adac_update_outdated_markets_key = {
+	scope = country
+	is_shown = { always = yes }		
+	is_valid = { always = yes }		
+	effect = 
+    { 
+		set_global_variable = 
+		{
+			name = g_updating_type_a
+			value = building_type:marketplace
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_b
+			value = building_type:merchants_quarters
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_c
+			value = building_type:grand_marketplace
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_d
+			value = building_type:commerce_center
+		}
+        fn_update_building_series = yes
+    }
+	#confirm_title = {}		
+	#confirm_text = {}		
+	
+	ai_chance = 0
+}
+
+#City_Manpowers
+adac_update_outdated_city_manpowers_key = {
+	scope = country
+	is_shown = { always = yes }		
+	is_valid = { always = yes }		
+	effect = 
+    { 
+		set_global_variable = 
+		{
+			name = g_updating_type_a
+			value = building_type:armory
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_b
+			value = building_type:barracks
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_c
+			value = building_type:conscription_center
+		}
+        fn_update_building_series = yes
+    }
+	#confirm_title = {}		
+	#confirm_text = {}		
+	
+	ai_chance = 0
+}
+#Rural_Manpowers
+adac_update_outdated_rural_manpowers_key = {
+	scope = country
+	is_shown = { always = yes }		
+	is_valid = { always = yes }		
+	effect = 
+    { 
+		set_global_variable = 
+		{
+			name = g_updating_type_a
+			value = building_type:training_fields
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_b
+			value = building_type:regimental_camp
+		}
+		set_global_variable = 
+		{
+			name = g_updating_type_c
+			value = building_type:conscription_center
+		}
+        fn_update_building_series = yes
+    }
+	#confirm_title = {}		
+	#confirm_text = {}		
+	
 	ai_chance = 0
 }

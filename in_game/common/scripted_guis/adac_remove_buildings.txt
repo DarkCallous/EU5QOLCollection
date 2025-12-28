@@ -1,0 +1,17 @@
+﻿# Enable buildings menu extension
+adac_destroy_forts_key = {
+	scope = country
+	is_valid = {
+		always = yes
+	}
+	effect = {
+		every_fort_in_country = {
+			destroy_all_buildings_of_type = building_type:stockade
+			destroy_all_buildings_of_type = building_type:castle
+			destroy_all_buildings_of_type = building_type:bastion
+			destroy_all_buildings_of_type = building_type:star_fort
+			destroy_all_buildings_of_type = building_type:fortress
+		}
+	}
+	ai_chance = 0
+}

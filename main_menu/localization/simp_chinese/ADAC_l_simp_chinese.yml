@@ -2,7 +2,78 @@
  ADAC: "便利操作工具集"
  ADAC_desc: "便利操作工具集"
  ADAC_Introduction_Title: "便利操作工具集"
- ADAC_Introduction: "本mod提供删除过期建筑、要塞等便利操作，AI不会使用本mod中的任何操作"
- ADAC_TITLE: "便利操作工具集"
- ADAC_Remove_Outdated_Tools_button: "拆除全部过时工具工厂"
- ADAC_Remove_Outdated_Tools_TT: "拆除全部过时工具工厂，但地块上无法建造最新工具工厂的除外"
+ ADAC_Introduction: "ADAC 系列提供了一组用于提升游戏体验的便捷功能。目前包括无用建筑移除与过时建筑升级等操作。所有功能仅用于改善操作体验，不会对游戏平衡产生任何影响。由于机制限制，本模组不支持铁人模式。所有操作均不会使你的国库资金低于 10,000。"
+ ADAC_TITLE: "便利操作"
+ ADAC_Action_TITLE: "便利操作工具集"
+
+ ADAC_Remove_Forts_button: "移除要塞"
+ ADAC_Remove_Forts_TT: "移除你国家内的所有要塞。在围城进行中使用可能导致未定义行为，请谨慎使用。"
+
+ ADAC_Update_Outdated_Beer_button: "升级啤酒生产"
+ ADAC_Update_Outdated_Beer_TT: "在条件允许的情况下，升级你国家内所有过时的啤酒生产建筑。"
+
+ ADAC_Update_Outdated_Books_button: "升级书籍生产"
+ ADAC_Update_Outdated_Books_TT: "在条件允许的情况下，升级你国家内所有过时的书籍生产建筑。"
+
+ ADAC_Update_Outdated_Cannons_button: "升级火炮生产"
+ ADAC_Update_Outdated_Cannons_TT: "在条件允许的情况下，升级你国家内所有过时的火炮生产建筑。"
+
+ ADAC_Update_Outdated_Cloth_button: "升级布匹生产"
+ ADAC_Update_Outdated_Cloth_TT: "在条件允许的情况下，升级你国家内所有过时的布匹生产建筑。"
+
+ ADAC_Update_Outdated_Dyes_button: "升级染料生产"
+ ADAC_Update_Outdated_Dyes_TT: "在条件允许的情况下，升级你国家内所有过时的染料生产建筑。"
+
+ ADAC_Update_Outdated_Fine_Cloth_button: "升级高级布匹生产"
+ ADAC_Update_Outdated_Fine_Cloth_TT: "在条件允许的情况下，升级你国家内所有过时的高级布匹生产建筑。"
+
+ ADAC_Update_Outdated_Firearms_button: "升级火器生产"
+ ADAC_Update_Outdated_Firearms_TT: "在条件允许的情况下，升级你国家内所有过时的火器生产建筑。"
+
+ ADAC_Update_Outdated_Furniture_button: "升级家具生产"
+ ADAC_Update_Outdated_Furniture_TT: "在条件允许的情况下，升级你国家内所有过时的家具生产建筑。"
+
+ ADAC_Update_Outdated_Glass_button: "升级玻璃生产"
+ ADAC_Update_Outdated_Glass_TT: "在条件允许的情况下，升级你国家内所有过时的玻璃生产建筑。"
+
+ ADAC_Update_Outdated_Lacquerware_button: "升级漆器生产"
+ ADAC_Update_Outdated_Lacquerware_TT: "在条件允许的情况下，升级你国家内所有过时的漆器生产建筑。"
+
+ ADAC_Update_Outdated_Leather_button: "升级皮革生产"
+ ADAC_Update_Outdated_Leather_TT: "在条件允许的情况下，升级你国家内所有过时的皮革生产建筑。"
+
+ ADAC_Update_Outdated_Liquor_button: "升级烈酒生产"
+ ADAC_Update_Outdated_Liquor_TT: "在条件允许的情况下，升级你国家内所有过时的烈酒生产建筑。"
+
+ ADAC_Update_Outdated_Naval_Supplies_button: "升级海军补给"
+ ADAC_Update_Outdated_Naval_Supplies_TT: "在条件允许的情况下，升级你国家内所有过时的海军补给生产建筑。"
+
+ ADAC_Update_Outdated_Paper_button: "升级纸张生产"
+ ADAC_Update_Outdated_Paper_TT: "在条件允许的情况下，升级你国家内所有过时的纸张生产建筑。"
+
+ ADAC_Update_Outdated_Porcelain_button: "升级瓷器生产"
+ ADAC_Update_Outdated_Porcelain_TT: "在条件允许的情况下，升级你国家内所有过时的瓷器生产建筑。"
+
+ ADAC_Update_Outdated_Pottery_button: "升级陶器生产"
+ ADAC_Update_Outdated_Pottery_TT: "在条件允许的情况下，升级你国家内所有过时的陶器生产建筑。"
+
+ ADAC_Update_Outdated_Saltpeter_button: "升级硝石生产"
+ ADAC_Update_Outdated_Saltpeter_TT: "在条件允许的情况下，升级你国家内所有过时的硝石生产建筑。"
+
+ ADAC_Update_Outdated_Tools_button: "升级工具生产"
+ ADAC_Update_Outdated_Tools_TT: "在条件允许的情况下，升级你国家内所有过时的工具生产建筑。"
+
+ ADAC_Update_Outdated_Weapons_button: "升级武器生产"
+ ADAC_Update_Outdated_Weapons_TT: "在条件允许的情况下，升级你国家内所有过时的武器生产建筑。"
+
+ ADAC_Update_Outdated_Wine_button: "升级葡萄酒生产"
+ ADAC_Update_Outdated_Wine_TT: "在条件允许的情况下，升级你国家内所有过时的葡萄酒生产建筑。"
+
+ ADAC_Update_Outdated_Markets_button: "升级市场"
+ ADAC_Update_Outdated_Markets_TT: "在条件允许的情况下，升级你国家内所有过时的市场建筑。"
+
+ ADAC_Update_Outdated_City_Manpowers_button: "升级城市人力"
+ ADAC_Update_Outdated_City_Manpowers_TT: "在条件允许的情况下，升级你国家内所有过时的城市人力建筑。"
+
+ ADAC_Update_Outdated_Rural_Manpowers_button: "升级乡村人力"
+ ADAC_Update_Outdated_Rural_Manpowers_TT: "在条件允许的情况下，升级你国家内所有过时的乡村人力建筑。"

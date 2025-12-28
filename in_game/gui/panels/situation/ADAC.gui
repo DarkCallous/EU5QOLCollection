@@ -36,10 +36,180 @@
 				fontsize = 14
 				using = bg_button_flavor_1
 
-				text = "ADAC_Remove_Outdated_Tools_button"
-				tooltip = "ADAC_Remove_Outdated_Tools_TT"
+				text = "ADAC_Remove_Forts_button"
+				tooltip = "ADAC_Remove_Forts_TT"
 
-				onclick = "[GetScriptedGui('adac_destroy_outdated_tools_key').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+				onclick = "[GetScriptedGui('adac_destroy_forts_key').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+			button_regular = {
+				size = { 480 30 }
+				fontsize = 14
+				using = bg_button_flavor_1
+
+				text = "ADAC_Update_Outdated_Beer_button"
+				tooltip = "ADAC_Update_Outdated_Beer_TT"
+
+				onclick = "[GetScriptedGui('adac_update_outdated_beer_key').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+			button_regular = {
+				size = { 480 30 }
+				fontsize = 14
+				using = bg_button_flavor_1
+
+				text = "ADAC_Update_Outdated_Books_button"
+				tooltip = "ADAC_Update_Outdated_Books_TT"
+
+				onclick = "[GetScriptedGui('adac_update_outdated_books_key').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+			button_regular = {
+				size = { 480 30 }
+				fontsize = 14
+				using = bg_button_flavor_1
+
+				text = "ADAC_Update_Outdated_Cannons_button"
+				tooltip = "ADAC_Update_Outdated_Cannons_TT"
+
+				onclick = "[GetScriptedGui('adac_update_outdated_cannons_key').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+			button_regular = {
+				size = { 480 30 }
+				fontsize = 14
+				using = bg_button_flavor_1
+
+				text = "ADAC_Update_Outdated_Cloth_button"
+				tooltip = "ADAC_Update_Outdated_Cloth_TT"
+
+				onclick = "[GetScriptedGui('adac_update_outdated_cloth_key').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+			button_regular = {
+				size = { 480 30 }
+				fontsize = 14
+				using = bg_button_flavor_1
+
+				text = "ADAC_Update_Outdated_Dyes_button"
+				tooltip = "ADAC_Update_Outdated_Dyes_TT"
+
+				onclick = "[GetScriptedGui('adac_update_outdated_dyes_key').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+			button_regular = {
+				size = { 480 30 }
+				fontsize = 14
+				using = bg_button_flavor_1
+
+				text = "ADAC_Update_Outdated_Fine_Cloth_button"
+				tooltip = "ADAC_Update_Outdated_Fine_Cloth_TT"
+
+				onclick = "[GetScriptedGui('adac_update_outdated_fine_cloth_key').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+			button_regular = {
+				size = { 480 30 }
+				fontsize = 14
+				using = bg_button_flavor_1
+
+				text = "ADAC_Update_Outdated_Firearms_button"
+				tooltip = "ADAC_Update_Outdated_Firearms_TT"
+
+				onclick = "[GetScriptedGui('adac_update_outdated_firearms_key').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+			button_regular = {
+				size = { 480 30 }
+				fontsize = 14
+				using = bg_button_flavor_1
+
+				text = "ADAC_Update_Outdated_Furniture_button"
+				tooltip = "ADAC_Update_Outdated_Furniture_TT"
+
+				onclick = "[GetScriptedGui('adac_update_outdated_furniture_key').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+			button_regular = {
+				size = { 480 30 }
+				fontsize = 14
+				using = bg_button_flavor_1
+
+				text = "ADAC_Update_Outdated_Glass_button"
+				tooltip = "ADAC_Update_Outdated_Glass_TT"
+
+				onclick = "[GetScriptedGui('adac_update_outdated_glass_key').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+			button_regular = {
+				size = { 480 30 }
+				fontsize = 14
+				using = bg_button_flavor_1
+
+				text = "ADAC_Update_Outdated_Lacquerware_button"
+				tooltip = "ADAC_Update_Outdated_Lacquerware_TT"
+
+				onclick = "[GetScriptedGui('adac_update_outdated_lacquerware_key').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+			button_regular = {
+				size = { 480 30 }
+				fontsize = 14
+				using = bg_button_flavor_1
+
+				text = "ADAC_Update_Outdated_Leather_button"
+				tooltip = "ADAC_Update_Outdated_Leather_TT"
+
+				onclick = "[GetScriptedGui('adac_update_outdated_leather_key').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+			button_regular = {
+				size = { 480 30 }
+				fontsize = 14
+				using = bg_button_flavor_1
+
+				text = "ADAC_Update_Outdated_Liquor_button"
+				tooltip = "ADAC_Update_Outdated_Liquor_TT"
+
+				onclick = "[GetScriptedGui('adac_update_outdated_liquor_key').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+			button_regular = {
+				size = { 480 30 }
+				fontsize = 14
+				using = bg_button_flavor_1
+
+				text = "ADAC_Update_Outdated_Naval_Supplies_button"
+				tooltip = "ADAC_Update_Outdated_Naval_Supplies_TT"
+
+				onclick = "[GetScriptedGui('adac_update_outdated_naval_supplies_key').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+			button_regular = {
+				size = { 480 30 }
+				fontsize = 14
+				using = bg_button_flavor_1
+
+				text = "ADAC_Update_Outdated_Paper_button"
+				tooltip = "ADAC_Update_Outdated_Paper_TT"
+
+				onclick = "[GetScriptedGui('adac_update_outdated_paper_key').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+			button_regular = {
+				size = { 480 30 }
+				fontsize = 14
+				using = bg_button_flavor_1
+
+				text = "ADAC_Update_Outdated_Porcelain_button"
+				tooltip = "ADAC_Update_Outdated_Porcelain_TT"
+
+				onclick = "[GetScriptedGui('adac_update_outdated_porcelain_key').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+			button_regular = {
+				size = { 480 30 }
+				fontsize = 14
+				using = bg_button_flavor_1
+
+				text = "ADAC_Update_Outdated_Pottery_button"
+				tooltip = "ADAC_Update_Outdated_Pottery_TT"
+
+				onclick = "[GetScriptedGui('adac_update_outdated_pottery_key').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+			button_regular = {
+				size = { 480 30 }
+				fontsize = 14
+				using = bg_button_flavor_1
+
+				text = "ADAC_Update_Outdated_Saltpeter_button"
+				tooltip = "ADAC_Update_Outdated_Saltpeter_TT"
+
+				onclick = "[GetScriptedGui('adac_update_outdated_saltpeter_key').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 			}
 			button_regular = {
 				size = { 480 30 }
@@ -50,6 +220,56 @@
 				tooltip = "ADAC_Update_Outdated_Tools_TT"
 
 				onclick = "[GetScriptedGui('adac_update_outdated_tools_key').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+			button_regular = {
+				size = { 480 30 }
+				fontsize = 14
+				using = bg_button_flavor_1
+
+				text = "ADAC_Update_Outdated_Weapons_button"
+				tooltip = "ADAC_Update_Outdated_Weapons_TT"
+
+				onclick = "[GetScriptedGui('adac_update_outdated_weapons_key').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+			button_regular = {
+				size = { 480 30 }
+				fontsize = 14
+				using = bg_button_flavor_1
+
+				text = "ADAC_Update_Outdated_Wine_button"
+				tooltip = "ADAC_Update_Outdated_Wine_TT"
+
+				onclick = "[GetScriptedGui('adac_update_outdated_wine_key').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+			button_regular = {
+				size = { 480 30 }
+				fontsize = 14
+				using = bg_button_flavor_1
+
+				text = "ADAC_Update_Outdated_Markets_button"
+				tooltip = "ADAC_Update_Outdated_Markets_TT"
+
+				onclick = "[GetScriptedGui('adac_update_outdated_markets_key').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+			button_regular = {
+				size = { 480 30 }
+				fontsize = 14
+				using = bg_button_flavor_1
+
+				text = "ADAC_Update_Outdated_City_Manpowers_button"
+				tooltip = "ADAC_Update_Outdated_City_Manpowers_TT"
+
+				onclick = "[GetScriptedGui('adac_update_outdated_city_manpowers_key').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
+			}
+			button_regular = {
+				size = { 480 30 }
+				fontsize = 14
+				using = bg_button_flavor_1
+
+				text = "ADAC_Update_Outdated_Rural_Manpowers_button"
+				tooltip = "ADAC_Update_Outdated_Rural_Manpowers_TT"
+
+				onclick = "[GetScriptedGui('adac_update_outdated_rural_manpowers_key').Execute(GuiScope.SetRoot(GetPlayer.MakeScope).End)]"
 			}
 		}
 	}

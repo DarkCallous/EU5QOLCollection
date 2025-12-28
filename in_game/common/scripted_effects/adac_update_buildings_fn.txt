@@ -1,0 +1,244 @@
+﻿fn_update_building_series =
+{
+    #Update to Lv2 if applicable
+    if =
+    {
+        limit = 
+        { 
+            trigger_if = 
+            {
+                limit = { has_global_variable = g_updating_type_c }
+                can_build_building = global_var:g_updating_type_b 
+                NOT = {can_build_building = global_var:g_updating_type_c}
+            }
+            trigger_else_if = 
+            {
+                limit = { has_global_variable = g_updating_type_b }
+                can_build_building = global_var:g_updating_type_b 
+            }
+            trigger_else = {always = no}
+        }
+        every_owned_location = 
+        {
+            limit = {can_build_building = global_var:g_updating_type_b}
+            set_local_variable = 
+            {
+                name = update_nums
+                value = 0
+            }
+            every_buildings_in_location = 
+            {
+                limit = 
+                {
+                    building_type = global_var:g_updating_type_a
+                }
+                change_local_variable =
+                {
+                    name = update_nums
+                    add = building_level
+                }
+            }
+            while =
+            {
+                limit = {root.gold > 10000}
+                count = local_var:update_nums
+                construct_building = 
+                {
+                    building_type = global_var:g_updating_type_b
+                }
+            }
+        }
+    }
+    #Update to Lv3 from Lv1 first. 
+    else_if =
+    {
+        limit = 
+        { 
+            trigger_if = 
+            {
+                limit = { has_global_variable = g_updating_type_d }
+                can_build_building = global_var:g_updating_type_c 
+                NOT = {can_build_building = global_var:g_updating_type_d}
+            }
+            trigger_else_if = 
+            {
+                limit = { has_global_variable = g_updating_type_c }
+                can_build_building = global_var:g_updating_type_c 
+            }
+            trigger_else = {always = no}
+        }
+        every_owned_location = 
+        {
+            limit = {can_build_building = global_var:g_updating_type_c}
+            set_local_variable = 
+            {
+                name = update_nums
+                value = 0
+            }
+            every_buildings_in_location = 
+            {
+                limit = 
+                {
+                    OR = 
+                    {
+                        building_type = global_var:g_updating_type_a
+                        building_type = global_var:g_updating_type_b
+                    }
+                }
+                change_local_variable =
+                {
+                    name = update_nums
+                    add = building_level
+                }
+            }
+            while =
+            {
+                limit = {root.gold > 10000}
+                count = local_var:update_nums
+                construct_building = 
+                {
+                    building_type = global_var:g_updating_type_c
+                }
+            }
+        }
+    }
+    #Update to Lv4 from Lv1 first. 
+    else_if =
+    {
+        limit = 
+        { 
+            trigger_if = 
+            {
+                limit = { has_global_variable = g_updating_type_e }
+                can_build_building = global_var:g_updating_type_d 
+                NOT = {can_build_building = global_var:g_updating_type_e}
+            }
+            trigger_else_if = 
+            {
+                limit = { has_global_variable = g_updating_type_d }
+                can_build_building = global_var:g_updating_type_d 
+            } 
+            trigger_else = {always = no}
+        }
+        every_owned_location = 
+        {
+            limit = {can_build_building = global_var:g_updating_type_d}
+            set_local_variable = 
+            {
+                name = update_nums
+                value = 0
+            }
+            every_buildings_in_location = 
+            {
+                limit = 
+                {
+                    OR = 
+                    {
+                        building_type = global_var:g_updating_type_a
+                        building_type = global_var:g_updating_type_b
+                        building_type = global_var:g_updating_type_c
+                    }
+                }
+                change_local_variable =
+                {
+                    name = update_nums
+                    add = building_level
+                }
+            }
+            while =
+            {
+                limit = {root.gold > 10000}
+                count = local_var:update_nums
+                construct_building = 
+                {
+                    building_type = global_var:g_updating_type_d
+                }
+            }
+        }
+    }
+    #Update to Lv5 from Lv1 first.
+    else_if =
+    {
+        limit = 
+        { 
+            trigger_if = 
+            {
+                limit = { has_global_variable = g_updating_type_f }
+                can_build_building = global_var:g_updating_type_e 
+                NOT = {can_build_building = global_var:g_updating_type_f}
+            }
+            trigger_else_if = 
+            {
+                limit = { has_global_variable = g_updating_type_e }
+                can_build_building = global_var:g_updating_type_e 
+            } 
+            trigger_else = {always = no}
+        }
+        every_owned_location = 
+        {
+            limit = {can_build_building = global_var:g_updating_type_e}
+            set_local_variable = 
+            {
+                name = update_nums
+                value = 0
+            }
+            every_buildings_in_location = 
+            {
+                limit = 
+                {
+                    OR = 
+                    {
+                        building_type = global_var:g_updating_type_a
+                        building_type = global_var:g_updating_type_b
+                        building_type = global_var:g_updating_type_c
+                        building_type = global_var:g_updating_type_d
+                    }
+                }
+                change_local_variable =
+                {
+                    name = update_nums
+                    add = building_level
+                }
+            }
+            while =
+            {
+                limit = {root.gold > 10000}
+                count = local_var:update_nums
+                construct_building = 
+                {
+                    building_type = global_var:g_updating_type_e
+                }
+            }
+        }
+    }
+    fn_clean_up_updating_list = yes
+}
+
+fn_clean_up_updating_list = 
+{
+    if =
+    {
+        limit = {has_global_variable = g_updating_type_a}
+        remove_global_variable = g_updating_type_a
+    }
+    if =
+    {
+        limit = {has_global_variable = g_updating_type_b}
+        remove_global_variable = g_updating_type_b
+    }
+    if =
+    {
+        limit = {has_global_variable = g_updating_type_c}
+        remove_global_variable = g_updating_type_c
+    }
+    if =
+    {
+        limit = {has_global_variable = g_updating_type_d}
+        remove_global_variable = g_updating_type_d
+    }
+    if =
+    {
+        limit = {has_global_variable = g_updating_type_e}
+        remove_global_variable = g_updating_type_e
+    }
+}

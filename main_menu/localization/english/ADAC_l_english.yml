@@ -2,13 +2,75 @@
  ADAC: "ADAC"
  ADAC_desc: "ADAC"
  ADAC_Introduction_Title: "ADAC"
- ADAC_Introduction: "After activating OGAS, $game_concept_road$ information will be calculated starting from $game_concept_capital$, and $build_roads$ outward from $game_concept_capital$. \nIf you possess overseas territories or wish to build $game_concept_road$ starting from a prime $game_concept_port$, you may click $OGAS_Add_Road_Departure$ to select a $game_concept_location$ you have planned. OGAS will then directly designate this $game_concept_location$ as $game_concept_road$ departure. Select again to remove the $game_concept_road$ departure.\nOGAS will reserve 1 year $game_concept_balance$, or 500/1250/2500/5000 $game_concept_gold$ depend on $game_concept_road$ $game_concept_advance$ to prevent $game_concept_bankrupt$."
- ADAC_TITLE: "OGAS Action"
- ADAC_Remove_Outdated_Tools_button: "Remove all outdated tool production buildings"
- ADAC_Remove_Outdated_Tools_TT: "Remove all outdated tool production buildings"
- ADAC_Action_TITLE: "OGAS Action"
- ADAC_Add_Road_Departure: "Add/Remove new $game_concept_road$ departure"
- ADAC_Add_Road_Departure_desc: "Reopen $game_concept_situation$ to refresh $SETTINGS_PAGE_MAP$"
- ADAC_Auto_Road_Construct_Button_Start: "Click to $RESUME$ $build_roads$"
- ADAC_Auto_Road_Construct_Button_Pause: "Click to $PAUSE$ $build_roads$"
- ADAC_Auto_Road_Construct_Button_TT: "Click to $PAUSE$/$RESUME$ road building"
+ ADAC_Introduction: "The ADAC collection provides a series of quality-of-life improvements. Currently, it includes tools for removing useless buildings and updating outdated buildings. All features are designed purely for convenience and do not affect game balance. Unfortunately, Ironman compatibility is not supported. None of these operations will reduce your treasury below 10,000."
+ ADAC_TITLE: "ADAC Action"
+ ADAC_Remove_Forts_button: "Remove Forts"
+ ADAC_Remove_Forts_TT: "Remove all forts in your country. Using it during a siege is a UB, please be careful not to use."
+
+ ADAC_Action_TITLE: "ADAC Action"
+
+ ADAC_Update_Outdated_Books_button: "Update Book Production"
+ ADAC_Update_Outdated_Books_TT: "Update all outdated book production building in your country if applicable."
+ 
+ ADAC_Update_Outdated_Cannons_button: "Update Cannon Production"
+ ADAC_Update_Outdated_Cannons_TT: "Update all outdated cannon production buildings in your country, if applicable."
+
+ ADAC_Update_Outdated_Cloth_button: "Update Cloth Production"
+ ADAC_Update_Outdated_Cloth_TT: "Update all outdated cloth production buildings in your country, if applicable."
+
+ ADAC_Update_Outdated_Dyes_button: "Update Dye Production"
+ ADAC_Update_Outdated_Dyes_TT: "Update all outdated dye production buildings in your country, if applicable."
+
+ ADAC_Update_Outdated_Fine_Cloth_button: "Update Fine Cloth Production"
+ ADAC_Update_Outdated_Fine_Cloth_TT: "Update all outdated fine cloth production buildings in your country, if applicable."
+
+ ADAC_Update_Outdated_Firearms_button: "Update Firearms Production"
+ ADAC_Update_Outdated_Firearms_TT: "Update all outdated firearms production buildings in your country, if applicable."
+
+ ADAC_Update_Outdated_Furniture_button: "Update Furniture Production"
+ ADAC_Update_Outdated_Furniture_TT: "Update all outdated furniture production buildings in your country, if applicable."
+
+ ADAC_Update_Outdated_Glass_button: "Update Glass Production"
+ ADAC_Update_Outdated_Glass_TT: "Update all outdated glass production buildings in your country, if applicable."
+
+ ADAC_Update_Outdated_Lacquerware_button: "Update Lacquerware Production"
+ ADAC_Update_Outdated_Lacquerware_TT: "Update all outdated lacquerware production buildings in your country, if applicable."
+
+ ADAC_Update_Outdated_Leather_button: "Update Leather Production"
+ ADAC_Update_Outdated_Leather_TT: "Update all outdated leather production buildings in your country, if applicable."
+
+ ADAC_Update_Outdated_Liquor_button: "Update Liquor Production"
+ ADAC_Update_Outdated_Liquor_TT: "Update all outdated liquor production buildings in your country, if applicable."
+
+ ADAC_Update_Outdated_Naval_Supplies_button: "Update Naval Supplies"
+ ADAC_Update_Outdated_Naval_Supplies_TT: "Update all outdated naval supplies production buildings in your country, if applicable."
+
+ ADAC_Update_Outdated_Paper_button: "Update Paper Production"
+ ADAC_Update_Outdated_Paper_TT: "Update all outdated paper production buildings in your country, if applicable."
+
+ ADAC_Update_Outdated_Porcelain_button: "Update Porcelain Production"
+ ADAC_Update_Outdated_Porcelain_TT: "Update all outdated porcelain production buildings in your country, if applicable."
+
+ ADAC_Update_Outdated_Pottery_button: "Update Pottery Production"
+ ADAC_Update_Outdated_Pottery_TT: "Update all outdated pottery production buildings in your country, if applicable."
+
+ ADAC_Update_Outdated_Saltpeter_button: "Update Saltpeter Production"
+ ADAC_Update_Outdated_Saltpeter_TT: "Update all outdated saltpeter production buildings in your country, if applicable."
+
+ ADAC_Update_Outdated_Tools_button: "Update Tools Production"
+ ADAC_Update_Outdated_Tools_TT: "Update all outdated tools production buildings in your country, if applicable."
+
+ ADAC_Update_Outdated_Weapons_button: "Update Weapons Production"
+ ADAC_Update_Outdated_Weapons_TT: "Update all outdated weapons production buildings in your country, if applicable."
+
+ ADAC_Update_Outdated_Wine_button: "Update Wine Production"
+ ADAC_Update_Outdated_Wine_TT: "Update all outdated wine production buildings in your country, if applicable."
+
+ ADAC_Update_Outdated_Markets_button: "Update Markets"
+ ADAC_Update_Outdated_Markets_TT: "Update all outdated market buildings in your country, if applicable."
+
+ ADAC_Update_Outdated_City_Manpowers_button: "Update City Manpower"
+ ADAC_Update_Outdated_City_Manpowers_TT: "Update all outdated city manpower buildings in your country, if applicable."
+
+ ADAC_Update_Outdated_Rural_Manpowers_button: "Update Rural Manpower"
+ ADAC_Update_Outdated_Rural_Manpowers_TT: "Update all outdated rural manpower buildings in your country, if applicable."
