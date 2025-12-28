@@ -1,4 +1,4 @@
-ADAC = {
+﻿ADAC = {
 	monthly_spawn_chance = 1
 	#hint_tag = hint_ADAC
 	

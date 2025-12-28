@@ -1,0 +1,8 @@
+﻿l_simp_chinese:
+ ADAC: "便利操作工具集"
+ ADAC_desc: "便利操作工具集"
+ ADAC_Introduction_Title: "便利操作工具集"
+ ADAC_Introduction: "本mod提供删除过期建筑、要塞等便利操作，AI不会使用本mod中的任何操作"
+ ADAC_TITLE: "便利操作工具集"
+ ADAC_Remove_Outdated_Tools_button: "拆除全部过时工具工厂"
+ ADAC_Remove_Outdated_Tools_TT: "拆除全部过时工具工厂，但地块上无法建造最新工具工厂的除外"
