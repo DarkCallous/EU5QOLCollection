@@ -1,0 +1,11 @@
+﻿{
+	"name":	"EU5QOLCollection",
+	"id":	"ada.qolc",
+	"version":	"0.1",
+	"supported_game_version":	"1.0.9",
+	"short_description":	"quality of life utilities collection",
+	"tags":	["User Interface"],
+	"relationships":	[],
+	"game_custom_data":	{
+}
+}
